@@ -11,21 +11,25 @@ class CubeSides(Enum):
 
 
 class Moves(Enum):
+    start = 0
     u = 1
     r = 2
     f = 3
     d = 4
     l = 5
     b = 6
-    ui = 7
-    ri = 8
-    fi = 9
-    di = 10
-    li = 11
-    bi = 12
-    u2 = 13
-    r2 = 14
-    f2 = 15
-    d2 = 16
-    l2 = 17
-    b2 = 18
+    m = 7
+    e = 8
+    s = 9
+    ui = 10
+    ri = 11
+    fi = 12
+    di = 13
+    li = 14
+    bi = 15
+    u2 = 16
+    r2 = 17
+    f2 = 18
+    d2 = 19
+    l2 = 20
+    b2 = 21

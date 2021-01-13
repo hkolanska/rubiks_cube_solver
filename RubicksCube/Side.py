@@ -1,12 +1,21 @@
 from typing import List
 from RubicksCube.States import CubeSides
 
+
 class Side:
     type: CubeSides
     current_state: List[List[int]]
 
     def __init__(self, state):
         self.current_state = state
+
+    def same(self):
+        first = self.current_state[0][0]
+        for row in self.current_state:
+            for element in row:
+                if first != element:
+                    return False
+        return True
 
     def clockwise_twist(self):
         new_u = [self.current_state[2][0], self.current_state[1][0],
@@ -68,10 +77,3 @@ class Side:
                 f"+ {' '.join(str(v) for v in self.current_state[1])} +",
                 f"+ {' '.join(str(v) for v in self.current_state[2])} +",
                 f"+-------+"]
-
-    def __str__(self):
-        return f"+-------+\n" \
-               f"+ {' '.join(str(v) for v in self.current_state[0])} +\n" \
-               f"+ {' '.join(str(v) for v in self.current_state[1])} +\n" \
-               f"+ {' '.join(str(v) for v in self.current_state[2])} +\n" \
-               f"+-------+\n"
