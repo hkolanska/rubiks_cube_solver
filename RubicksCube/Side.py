@@ -1,9 +1,7 @@
 from typing import List
-from RubicksCube.States import CubeSides
 
 
 class Side:
-    type: CubeSides
     current_state: List[List[int]]
 
     def __init__(self, state):
